@@ -1,6 +1,6 @@
 
 
-$(document).mousemove(function(e) {
+	$(document).mousemove(function(e) {
 	if (!!this.move) {
 		var posix = !document.move_target ? {'x': 0, 'y': 0} : document.move_target.posix,
 			callback = document.call_down || function() {
@@ -60,10 +60,59 @@ if (e.pageX - posix.x + posix.w <500) {   $box.css({
 
 
 
+
+
+//close
+var theToggle = document.getElementById('toggle');
+
+// based on Todd Motto functions
+// http://toddmotto.com/labs/reusable-js/
+
+// hasClass
+function hasClass(elem, className) {
+	return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+}
+// addClass
+function addClass(elem, className) {
+    if (!hasClass(elem, className)) {
+    	elem.className += ' ' + className;
+    }
+}
+// removeClass
+function removeClass(elem, className) {
+	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+	if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+            newClass = newClass.replace(' ' + className + ' ', ' ');
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    }
+}
+// toggleClass
+function toggleClass(elem, className) {
+	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(" " + className + " ") >= 0 ) {
+            newClass = newClass.replace( " " + className + " " , " " );
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    } else {
+        elem.className += ' ' + className;
+    }
+}
+
+theToggle.onclick = function() {
+   toggleClass(this, 'on');
+   return false;
+};
+
+
+
+
 //tab jquery
 
 function resetTabs(obj) {
-	$(obj).parent().parent().next("div").find("div").hide();
+	$(obj).parent().parent().next("div").find(".tab-list").hide();
 	$(obj).parent().parent().find("a").removeClass("current");
 }
 function loadTab() {
@@ -87,9 +136,11 @@ function loadTab() {
 }
 
 
-	$(function(){
-				loadTab();
-			});
+
+			window.onload = function () {
+			loadTab();
+			}
+
 
 
 var search = document.getElementById('search');
@@ -102,13 +153,25 @@ function loading() {
 	setTimeout(function() {
 		search.classList.remove('loading');
 	}, 1500);
-}
+};
 
-button.addEventListener('click', loading);
+$("#button").on('click', loading);
 
-input.addEventListener('keydown', function() {
+$("#input").on('keydown', function() {
 	if(event.keyCode == 13) loading();
 });
+
+(function() {
+  $(function() {
+    return $('[data-toggle]').on('click', function() {
+      var toggle;
+      toggle = $(this).addClass('active').attr('data-toggle');
+      $(this).siblings('[data-toggle]').removeClass('active');
+      return $('.surveys').removeClass('grid list').addClass(toggle);
+    });
+  });
+
+}).call(this);
 /*
 function makeheight(){
 	var aheigth = $(".side_contain").innerHeight;
@@ -117,3 +180,5 @@ function makeheight(){
 };
 setTimeout(makeheight,1000)*/
 //$('.side_bar').perfectScrollbar();
+
+
