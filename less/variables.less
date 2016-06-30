@@ -1,0 +1,27 @@
+@borderradiu: .5em;
+@screen-sm-min:768px;
+@font-size-base:12px;
+
+.rotate(@rotate:180deg){transform: rotate(@rotate); 
+-ms-transform: rotate(@rotate);		/* IE 9 */
+-webkit-transform: rotate(@rotate);	/* Safari and Chrome */
+-o-transform: rotate(@rotate);		/* Opera */
+-moz-transform: rotate(@rotate);	}
+
+
+.transition(@which:all,@time:1s){
+transition: @which @time;
+-moz-transition: @which @time; /* Firefox 4 */
+-webkit-transition: @which @time; /* Safari 和 Chrome */
+-o-transition: @which @time; 
+}
+
+.box-shadow{
+ -webkit-box-shadow:1px 1px 1px rgba(170, 170, 170, 0.25);
+  -moz-box-shadow:1px 1px 1px rgba(170, 170, 170, 0.25);
+  box-shadow: 1px 1px 1px rgba(170, 170, 170, 0.25);
+
+
+}
+
+

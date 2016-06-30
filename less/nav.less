@@ -1,0 +1,39 @@
+@nav_height: 60px;
+
+.nav_top {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	line-height: @nav_height;
+	z-index: 999;
+	width: 100%;
+	height: @nav_height;
+	background-color: @white;
+	border-bottom: 1px solid @middle-grey;.box-shadow;
+	//box-shadow: 0px 1px 5px #333333;
+
+	.logo { float: left; display: inline-block; border-right: 1px solid @middle-grey;padding: 0 3em;
+		i {
+			display: inline-block;
+			float: left;
+		
+			height: @nav_height;
+			width: 70px;
+			background: center center no-repeat url(../img/logo.png);
+			background-size: 100%;
+		}
+		span{float: left;margin-left: 10px;font-size: 2em;color: @word-black;}
+	}
+
+
+#search{.search}
+
+
+
+.close{ .close();
+
+}
+
+
+
+}

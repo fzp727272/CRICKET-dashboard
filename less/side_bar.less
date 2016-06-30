@@ -1,0 +1,109 @@
+@sidebarwidth: 300px;
+@sidebarwidthcut: 295px;
+
+.side_bar {
+	overflow-y: auto;
+	position: fixed;
+	top: @nav_height;
+	left: 0;
+	background: @purple-dark;
+	width: @sidebarwidth;
+	height: 100%;
+
+	&::-webkit-scrollbar-track-piece {
+		background-color: @purple-dark;
+	}
+	&::-webkit-scrollbar {
+		width: 8px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: @word-grey;
+		background-clip: padding-box;
+		min-height: 28px;
+	}
+	&::-webkit-scrollbar-thumb:vertical {
+		border-radius: 4px;
+	}
+
+	/*.side_contain {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		ul {
+			width: 100%;
+			padding: 0;
+			margin: 0;
+
+			li {
+				padding: 1em .5em;
+
+				.get {
+					background: @blue-light;
+					padding: 0.3em;
+					border-radius: .3em;
+					margin-right: 1em;
+				}
+				.post {
+					background: @blue-light;
+					padding: 0.3em;
+					border-radius: .3em;
+					margin-right: 1em;
+				}
+				list-style: none;
+				color: @white;
+			}
+		}
+	}*/
+	.viewport {
+		padding-top: 2em;
+		color: @white;
+		overflow: hidden;
+
+		li {
+			list-style: none;
+
+			a {text-decoration: none;
+				color: @white;
+				cursor: pointer;
+				width: 100%;
+			}
+			.get {
+				float: left;
+				display: block;
+				padding: 1.5em 0em 1.5em 4.5em;
+				background: .6em center no-repeat url("../img/get.png");
+
+				&:hover {
+					.listhover;
+				}
+			}
+			.active {
+				.listhover;
+			}
+			.post {
+				float: left;
+				display: block;
+				padding: 1.5em 0em 1.5em 4.5em;
+				background: .6em center no-repeat url("../img/post.png");
+
+				&:hover {
+					.listhover;
+				}
+			}
+		}
+	}
+	.drag_control {
+		position: fixed;
+		display: inline-block;
+		left: @sidebarwidthcut;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		cursor: e-resize;
+		width: 10px;
+		height: 100%;
+		float: right;
+		background-color: #333;
+		//border-right: 3px solid darken(@purple-dark, 15%);
+	}
+}

@@ -1,0 +1,112 @@
+.search(@width:250px) {
+  position: relative;
+  float: left;
+  width: @width;
+  height: @nav_height;
+  background: @white;
+  transition: all 0.5s;
+  border-left: 1px solid @middle-grey;
+  border-right: 1px solid @middle-grey;
+  padding-left: 2em;
+  padding-right: 0;
+  font-size: 1.5em;
+
+  &:hover, &:focus {
+    // background: #853cd3;
+  }
+  input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    outline: 0;
+  }
+  button {
+    position: absolute;
+    right: 1em;
+    font-size: 1.6em;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    outline: 0;
+    padding: 0 0.25em;
+    color: @word-grey;
+    i{color: @word-grey;margin-right: .6em;.transition(@which:all,@time:.6s)  }
+
+    &:hover {
+      i {color: @word-black; margin-right: 0;    
+        
+      }
+    }
+  }
+  & input::-webkit-input-placeholder {
+    color: @word-grey;
+  }
+  & input::-moz-placeholder {
+    color: @word-grey;
+  }
+  & input:-ms-input-placeholder {
+    color: @word-grey;
+  }
+  & input::placeholder {
+    color: @word-grey;
+  }
+  & .spinner {
+     position: absolute;
+    right:1em;
+    top: 0;
+   
+    color: @word-black;
+    -webkit-animation: spinner 1s infinite linear;
+    animation: spinner 1s infinite linear;
+    display: none;
+  }
+  &.loading button {
+    display: none;
+  }
+  &.loading .spinner {
+    display: block;
+    padding: 0 0.25em;
+  }
+  @-webkit-keyframes buttoner {
+    0% {
+      margin-right: 0em;
+    }
+    100% {
+      margin-right: -1em;
+    }
+  }
+  @keyframes buttoner {
+    0% {
+        margin-right: 0em;
+    }
+    100% {
+      margin-right: -1em;
+    }
+  }
+  @-webkit-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+}

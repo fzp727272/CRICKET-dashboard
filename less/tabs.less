@@ -1,0 +1,57 @@
+	.tabcontainer {
+		overflow: hidden;
+		margin: 2em;
+		border: 1px solid @middle-grey;
+		border-radius: @borderradiu;
+
+		.tabs {
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			//background-color: @white;
+			//border: 1px solid @middle-grey;
+			//border-radius: @borderradiu;
+
+
+			li {
+				width: 25%;
+				list-style: none;
+				text-align: center;
+				float: left;
+				line-height: 4em;
+
+			}
+			.current {
+				background: @white;
+				border-bottom: 2px solid  @blue-light;
+				color: @word-black;
+			}
+			a {
+				display: block;
+				font-weight: bold;
+				text-align: center;
+				padding: .5em 0em;
+				color: @word-grey;
+				text-decoration: none;
+				border-right: 1px solid  @middle-grey;
+				background-color:@basegrey; 
+
+				&:hover {
+					.current
+				}
+				&:focus {
+					.current
+				}
+			}
+		}
+
+		.content {
+			overflow-y: auto;
+
+			background: @white;
+		
+			text-align: left;
+			padding:1em 2em;
+
+		}
+	}
