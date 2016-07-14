@@ -1,5 +1,76 @@
-.box-shadow {
-  -webkit-box-shadow: 1px 1px 1px rgba(170, 170, 170, 0.25);
-  -moz-box-shadow: 1px 1px 1px rgba(170, 170, 170, 0.25);
-  box-shadow: 1px 1px 1px rgba(170, 170, 170, 0.25);
+.row {
+  margin: 1%;
+  overflow: hidden;
+}
+.colume-12 {
+  width: 98%;
+  float: left;
+  padding: 0 1%;
+  overflow: hidden;
+}
+.colume-11 {
+  width: 89.66666667%;
+  float: left;
+  padding: 0 1%;
+  overflow: hidden;
+}
+.colume-10 {
+  width: 81.33333333%;
+  float: left;
+  padding: 0 1%;
+  overflow: hidden;
+}
+.colume-9 {
+  width: 73%;
+  float: left;
+  padding: 0 1%;
+  overflow: hidden;
+}
+.colume-8 {
+  width: 64.66666667%;
+  float: left;
+  padding: 0 1%;
+  overflow: hidden;
+}
+.colume-7 {
+  width: 56.33333333%;
+  float: left;
+  padding: 0 1%;
+  overflow: hidden;
+}
+.colume-6 {
+  width: 48%;
+  float: left;
+  padding: 0 1%;
+  overflow: hidden;
+}
+.colume-5 {
+  width: 39.66666667%;
+  float: left;
+  padding: 0 1%;
+  overflow: hidden;
+}
+.colume-4 {
+  width: 31.33333333%;
+  float: left;
+  padding: 0 1%;
+  overflow: hidden;
+}
+.colume-3 {
+  width: 23%;
+  float: left;
+  padding: 0 1%;
+  overflow: hidden;
+}
+.colume-2 {
+  width: 14.66666667%;
+  float: left;
+  padding: 0 1%;
+  overflow: hidden;
+}
+.colume-1 {
+  width: 6.33333333%;
+  float: left;
+  padding: 0 1%;
+  overflow: hidden;
 }
