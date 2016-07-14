@@ -1,0 +1,54 @@
+//color
+
+@import "color.less";
+@import "variables.less";
+@import "nav.less";
+@import "close.less";
+@import "side_bar.less";
+@import "search.less";
+@import "responsive.less";
+@import "list.less";
+@import "tabs.less";
+@import "table.less";
+@import "panel.less";
+@import "button.less";
+@import "normalize.less";
+
+
+
+//side bar
+.listhover {
+	background-color: @blue-dark;
+	border-right: 3px solid @blue-light;
+}
+body {
+	font-family: Arial;
+	font-size: @font-size-base;
+	padding-left: @sidebarwidth;
+	margin: 0;
+	padding-top: @nav_height;
+	background-color: @light-grey;
+  @media (max-width: @screen-sm-min) {
+    font-size: (@font-size-base * 1.1);
+  }
+}
+
+#main_container {
+	padding-top: 1.5em;
+
+	.title {
+		margin: 1em 2em;
+		font-size: 14px;
+
+		.father {
+			color: @blue-light;
+		}
+		.children {
+			color: @word-black;
+		}
+		.clickable {
+			cursor: pointer;
+		}
+	}
+
+}

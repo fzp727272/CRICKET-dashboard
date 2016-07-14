@@ -1,6 +1,7 @@
 @nav_height: 60px;
 
 .nav_top {
+
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -12,26 +13,32 @@
 	border-bottom: 1px solid @middle-grey;.box-shadow;
 	//box-shadow: 0px 1px 5px #333333;
 
-	.logo { float: left; display: inline-block; border-right: 1px solid @middle-grey;padding: 0 3em;
+	.logo { float: left; display: inline-block; border-right: 1px solid @middle-grey;padding: 0 2.5em 0 2em;
 		i {
 			display: inline-block;
 			float: left;
-		
+		    margin-top: 2px;
 			height: @nav_height;
 			width: 70px;
-			background: center center no-repeat url(../img/logo.png);
-			background-size: 100%;
+			//background: center center no-repeat url(../img/logo.png);
+			//background-size: 70%;
 		}
-		span{float: left;margin-left: 10px;font-size: 2em;color: @word-black;}
+		span{float: left;margin-left: 5px;font-size: 2em;color: @word-black;}
+
+.cricket_mouse_left{transition:all .3s;transform-origin:top;}
+.cricket_mouse_right{transition:all .3s;transform-origin:top;}
+
 	}
 
 
 #search{.search}
 
 
-
-.close{ .close();
-
+.set{float: right;width: 60px;    text-align: center;color: @word-black;cursor: pointer;
+    font-size: 2em;border-left: 1px solid @middle-grey;
+&:hover{.box-shadow(2px)}}
+.close{ .close();border-left: 1px solid @middle-grey;
+&:hover{.box-shadow(2px)}
 }
 
 

@@ -1,6 +1,9 @@
 @borderradiu: .5em;
 @screen-sm-min:768px;
 @font-size-base:12px;
+@padding-size:0.01;
+
+@z-index-top:10000;
 
 .rotate(@rotate:180deg){transform: rotate(@rotate); 
 -ms-transform: rotate(@rotate);		/* IE 9 */
@@ -16,12 +19,32 @@ transition: @which @time;
 -o-transition: @which @time; 
 }
 
-.box-shadow{
- -webkit-box-shadow:1px 1px 1px rgba(170, 170, 170, 0.25);
-  -moz-box-shadow:1px 1px 1px rgba(170, 170, 170, 0.25);
-  box-shadow: 1px 1px 1px rgba(170, 170, 170, 0.25);
+.box-shadow(@size:1px){
+ -webkit-box-shadow:@size @size @size*1.5 rgba(170, 170, 170, 0.25);
+  -moz-box-shadow:@size @size @size*1.5 rgba(170, 170, 170, 0.25);
+  box-shadow: @size @size @size*1.5 rgba(170, 170, 170, 0.25);
+}
 
-
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
 }
 
 
+
+.row{margin: percentage(@padding-size);overflow: hidden;}
+.colume(@width:12){width:percentage( @width/12-@padding-size*2);float: left; padding:0 percentage(@padding-size); overflow:hidden;}
+.colume-12{.colume(12)};
+.colume-11{.colume(11)};
+.colume-10{.colume(10)};
+.colume-9{.colume(9)};
+.colume-8{.colume(8)};
+.colume-7{.colume(7)};
+.colume-6{.colume(6)};
+.colume-5{.colume(5)};
+.colume-4{.colume(4)};
+.colume-3{.colume(3)};
+.colume-2{.colume(2)};
+.colume-1{.colume(1)};
