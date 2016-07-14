@@ -1,500 +1,441 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv=Content-Type content=“text/html;charset=utf-8″>
-  <meta http-equiv=X-UA-Compatible content=IE=EmulateIE7>
-  <title>CRICKET</title>
-  <link href="img/icon.ico" rel="shortcut icon"></head>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <meta http-equiv=X-UA-Compatible content=IE=EmulateIE7>
+    <title>CRICKET</title>
+    <link href="img/icon.ico" rel="shortcut icon">
+</head>
+<link rel="stylesheet" type="text/css" href="css/cricket.css">
+<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+
 <body>
-  <div class="nav_top">
-    <div class="logo"> <i></i>
-      <span>CRICKET</span>
+    <div class="nav_top">
+        <div class="logo"> <i><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="60px" height="56px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#474F79" d="M181.5,151.464c0,34.126-56.102,46.536-78.336,46.536  C80.929,198,22.5,183.522,22.5,151.464c0-53.876,14.521-86.512,52.287-96.204L47.511,7.837c-0.967-1.682-0.393-3.832,1.282-4.803  l0.506-0.293c1.675-0.971,3.817-0.395,4.784,1.287L82.61,53.627c5.844-0.948,12.158-1.441,19.002-1.441  c7.639,0,14.634,0.611,21.056,1.791l28.756-49.85c0.973-1.687,3.128-2.264,4.813-1.291l0.509,0.294  c1.685,0.974,2.262,3.13,1.29,4.816l-27.58,47.809C166.983,66.054,181.5,98.512,181.5,151.464z M69.896,80.107  c-10.327,0-18.698,8.334-18.698,18.614c0,10.281,8.371,18.615,18.698,18.615c10.326,0,18.698-8.334,18.698-18.615  C88.594,88.441,80.222,80.107,69.896,80.107z M134.104,80.107c-10.327,0-18.698,8.334-18.698,18.614  c0,10.281,8.371,18.615,18.698,18.615c10.326,0,18.698-8.334,18.698-18.615C152.803,88.441,144.431,80.107,134.104,80.107z"/>
+
+                    <path class="cricket_mouse_left" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M82.631,137.522c-2.14-1.679-9.579-1.348-16.052-3.662    c-6.385-2.284-13.759-6.293-13.759-6.293s-6.643-6.749-4.574,19.577c2.125,27.019,18.19,33.3,20.483,32.461    c2.294-0.838,14.666-38.754,14.666-38.754S84.771,139.2,82.631,137.522z"/>
+                    <path class="cricket_mouse_right" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M150.07,127.345c0,0-7.304,4.137-13.648,6.531    c-6.43,2.428-13.874,2.227-15.984,3.942c-2.11,1.715-0.705,3.342-0.705,3.342s13.031,37.694,15.34,38.492    c2.307,0.8,18.261-5.762,19.913-32.813C156.594,120.481,150.07,127.345,150.07,127.345z"/>
+
+                    <g class="cricket_eye">
+                        <circle fill-rule="evenodd" clip-rule="evenodd" fill="#474F79" cx="90" cy="96" r="9.125"/>
+                        <circle fill-rule="evenodd" clip-rule="evenodd" fill="#474F79" cx="134" cy="96" r="9.125"/>
+                    </g>
+                </svg></i>
+            <span>CRICKET</span>
+        </div>
+        <div id="search">
+            <input id="input" placeholder="Go to..." />
+            <button id="button"> <i class="fa fa-long-arrow-right"></i>
+            </button>
+            <div class="spinner">
+                <i class="fa fa-refresh"></i>
+            </div>
+        </div>
+      
+        <div class="set">
+            <span class="fa fa-ellipsis-h"></span>
+        </div>
+        <div class="close">
+            <a href="#menu" id="toggle" class="toggle">
+                <span></span>
+            </a>
+            <div id="menu" class="menu">
+                <ul>
+                    <li>
+                        <a  id="list" class=" active">list</a>
+                    </li>
+                    <li>
+                        <a  id="table">table</a>
+                    </li>
+                      <li>
+                        <a  id="button">button&icon</a>
+                    </li>
+                    <li>
+                        <a  id="chart">chart</a>
+                    </li>
+                    <li>
+                        <a  id="login">login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div id="search">
-      <input id="input" placeholder="Go to..." />
-      <button id="button"> <i class="fa fa-long-arrow-right"></i>
-      </button>
-      <div class="spinner">
-        <i class="fa fa-refresh"></i>
-      </div>
+    <div class="side_bar">
+        <div class="drag_control"></div>
+        <!--//滚动条样式，track为滚动条轨道，thumb为滚动按钮，end可以设置滚动按钮上或下的样-->
+        <div class="viewport">
+            <li>
+                <a class="get">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+            <li>
+                <a class="get">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+            <li>
+                <a class="get">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+            <li>
+                <a class="get">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+            <li>
+                <a class="get active">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+            <li>
+                <a class="get">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+            <li>
+                <a class="get">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+            <li>
+                <a class="get">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+            <li>
+                <a class="get">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+            <li>
+                <a class="post">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+            <li>
+                <a class="post">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+            <li>
+                <a class="post">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+            <li>
+                <a class="post">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+            <li>
+                <a class="post">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+            <li>
+                <a class="post">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+            <li>
+                <a class="post">
+          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
+        </a>
+            </li>
+        </div>
     </div>
-
-    <div class="close">
-      <a href="#menu" id="toggle" class="toggle">
-        <span></span>
-      </a>
-
-      <div id="menu" class="menu">
-        <ul>
-          <li>
-            <a href="#home" id="list">list</a>
-          </li>
-          <li>
-            <a href="#about" id="table">table</a>
-          </li>
-          <li>
-            <a href="#contact" id="chart">chart</a>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
-  </div>
-  <div class="side_bar">
-    <div class="drag_control"></div>
-    <!--//滚动条样式，track为滚动条轨道，thumb为滚动按钮，end可以设置滚动按钮上或下的样-->
-    <div class="viewport">
-      <li>
-        <a class="get">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-      <li>
-        <a class="get">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-      <li>
-        <a class="get">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-      <li>
-        <a class="get">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-      <li>
-        <a class="get active">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-      <li>
-        <a class="get">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-      <li>
-        <a class="get">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-      <li>
-        <a class="get">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-      <li>
-        <a class="get">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-      <li>
-        <a class="post">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-      <li>
-        <a class="post">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-      <li>
-        <a class="post">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-      <li>
-        <a class="post">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-      <li>
-        <a class="post">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-      <li>
-        <a class="post">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-      <li>
-        <a class="post">
-          file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html
-        </a>
-      </li>
-    </div>
-  </div>
-
-  <div id="main_container">
-
-    <span class="title">
+    <div id="main_container">
+        <span class="title">
       <span class="father clickable"> <b>DASHBOARD&nbsp;</b>
       </span> <b class="father clickable"><i class="fa fa-angle-double-right father" ></i>
-        thisisa</b> 
-      <i class="fa fa-angle-double-right father"></i>
-      <b class="father">file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html</b> 
-      <i class="fa fa-angle-double-right father"></i>
-      <b class="children">TAB1</b>
-    </span>
-    <div class="tabcontainer">
-      <ul class="tabs">
-        <li>
-          <a href="#" name=".tab1_1">TAB1</a>
-        </li>
-        <li>
-          <a href="#" name=".tab1_2">TAB2</a>
-        </li>
-        <li>
-          <a href="#" name=".tab1_3">TAB3</a>
-        </li>
-        <li>
-          <a href="#" name=".tab1_4">TAB4</a>
-        </li>
-      </ul>
-      <div class="content">
-
-        <div class="tab1_1 tab-list">
-          <ul class="list">
-
-            <span class="toggler active" data-toggle="grid">
-              <span class="fa fa-th"></span>
-            </span>
-            <span class="toggler" data-toggle="list">
-              <span class="fa fa-list"></span>
-            </span>
-            <ul class="surveys grid">
-              <li class="survey-item">
-
-                <span class="survey-country list-only">UK</span>
-
-                <span class="survey-name">UK Beer May 2014</span>
-
-                <span class="survey-country grid-only">UK</span>
-
-                <div class="pull-right">
-
-                  <span class="survey-progress">
-                    <span class="survey-progress-bg">
-                      <span class="survey-progress-fg" style="width: 88%;"></span>
-                    </span>
-
-                    <span class="survey-progress-labels">
-                      <span class="survey-progress-label">88%</span>
-
-                      <span class="survey-completes">490 / 500</span>
-                    </span>
-                  </span>
-
-                  <span class="survey-end-date ended">2014 - May 10</span>
-                  <span class="survey-stage">
-                    <span class="stage draft">Draft</span>
-                    <span class="stage awarded">Awarded</span>
-                    <span class="stage live">Live</span>
-                    <span class="stage ended active">Ended</span>
-                  </span>
-                </div>
-              </li>
-              <li class="survey-item">
-                <span class="survey-country list-only">US</span>
-
-                <span class="survey-name">Pepsi Tracker New Orleans</span>
-
-                <span class="survey-country grid-only">US</span>
-
-                <div class="pull-right">
-
-                  <span class="survey-progress">
-                    <span class="survey-progress-bg">
-                      <span class="survey-progress-fg" style="width: 25%;"></span>
-                    </span>
-
-                    <span class="survey-progress-labels">
-                      <span class="survey-progress-label">25%</span>
-
-                      <span class="survey-completes">150 / 500</span>
-                    </span>
-                  </span>
-
-                  <span class="survey-end-date">2014 - July 12</span>
-                  <span class="survey-stage">
-                    <span class="stage draft">Draft</span>
-                    <span class="stage awarded">Awarded</span>
-                    <span class="stage live active">Live</span>
-                    <span class="stage ended">Ended</span>
-                  </span>
-                </div>
-              </li>
-              <li class="survey-item">
-                <span class="survey-country list-only">US</span>
-
-                <span class="survey-name">Global Music Brand Tracker</span>
-
-                <span class="survey-country grid-only">US</span>
-
-                <div class="pull-right">
-                  <span class="survey-end-date">2014 - Oct 1</span>
-                  <span class="survey-stage">
-                    <span class="stage draft">Draft</span>
-                    <span class="stage awarded active">Awarded</span>
-                    <span class="stage live">Live</span>
-                    <span class="stage ended">Ended</span>
-                  </span>
-                </div>
-              </li>
-              <li class="survey-item">
-
-                <span class="survey-country list-only">UK</span>
-
-                <span class="survey-name">UK Beer May 2014</span>
-
-                <span class="survey-country grid-only">UK</span>
-
-                <div class="pull-right">
-
-                  <span class="survey-progress">
-                    <span class="survey-progress-bg">
-                      <span class="survey-progress-fg" style="width: 88%;"></span>
-                    </span>
-
-                    <span class="survey-progress-labels">
-                      <span class="survey-progress-label">88%</span>
-
-                      <span class="survey-completes">490 / 500</span>
-                    </span>
-                  </span>
-
-                  <span class="survey-end-date ended">2014 - May 10</span>
-                  <span class="survey-stage">
-                    <span class="stage draft">Draft</span>
-                    <span class="stage awarded">Awarded</span>
-                    <span class="stage live">Live</span>
-                    <span class="stage ended active">Ended</span>
-                  </span>
-                </div>
-              </li>
-              <li class="survey-item">
-                <span class="survey-country list-only">US</span>
-
-                <span class="survey-name">Pepsi Tracker New Orleans</span>
-
-                <span class="survey-country grid-only">US</span>
-
-                <div class="pull-right">
-
-                  <span class="survey-progress">
-                    <span class="survey-progress-bg">
-                      <span class="survey-progress-fg" style="width: 25%;"></span>
-                    </span>
-
-                    <span class="survey-progress-labels">
-                      <span class="survey-progress-label">25%</span>
-
-                      <span class="survey-completes">150 / 500</span>
-                    </span>
-                  </span>
-
-                  <span class="survey-end-date">2014 - July 12</span>
-                  <span class="survey-stage">
-                    <span class="stage draft">Draft</span>
-                    <span class="stage awarded">Awarded</span>
-                    <span class="stage live active">Live</span>
-                    <span class="stage ended">Ended</span>
-                  </span>
-                </div>
-              </li>
-              <li class="survey-item">
-                <span class="survey-country list-only">US</span>
-
-                <span class="survey-name">Global Music Brand Tracker</span>
-
-                <span class="survey-country grid-only">US</span>
-
-                <div class="pull-right">
-                  <span class="survey-end-date">2014 - Oct 1</span>
-                  <span class="survey-stage">
-                    <span class="stage draft">Draft</span>
-                    <span class="stage awarded active">Awarded</span>
-                    <span class="stage live">Live</span>
-                    <span class="stage ended">Ended</span>
-                  </span>
-                </div>
-              </li>
-              <li class="survey-item">
-
-                <span class="survey-country list-only">UK</span>
-
-                <span class="survey-name">UK Beer May 2014</span>
-
-                <span class="survey-country grid-only">UK</span>
-
-                <div class="pull-right">
-
-                  <span class="survey-progress">
-                    <span class="survey-progress-bg">
-                      <span class="survey-progress-fg" style="width: 88%;"></span>
-                    </span>
-
-                    <span class="survey-progress-labels">
-                      <span class="survey-progress-label">88%</span>
-
-                      <span class="survey-completes">490 / 500</span>
-                    </span>
-                  </span>
-
-                  <span class="survey-end-date ended">2014 - May 10</span>
-                  <span class="survey-stage">
-                    <span class="stage draft">Draft</span>
-                    <span class="stage awarded">Awarded</span>
-                    <span class="stage live">Live</span>
-                    <span class="stage ended active">Ended</span>
-                  </span>
-                </div>
-              </li>
-              <li class="survey-item">
-                <span class="survey-country list-only">US</span>
-
-                <span class="survey-name">Pepsi Tracker New Orleans</span>
-
-                <span class="survey-country grid-only">US</span>
-
-                <div class="pull-right">
-
-                  <span class="survey-progress">
-                    <span class="survey-progress-bg">
-                      <span class="survey-progress-fg" style="width: 25%;"></span>
-                    </span>
-
-                    <span class="survey-progress-labels">
-                      <span class="survey-progress-label">25%</span>
-
-                      <span class="survey-completes">150 / 500</span>
-                    </span>
-                  </span>
-
-                  <span class="survey-end-date">2014 - July 12</span>
-                  <span class="survey-stage">
-                    <span class="stage draft">Draft</span>
-                    <span class="stage awarded">Awarded</span>
-                    <span class="stage live active">Live</span>
-                    <span class="stage ended">Ended</span>
-                  </span>
-                </div>
-              </li>
-              <li class="survey-item">
-                <span class="survey-country list-only">US</span>
-
-                <span class="survey-name">Global Music Brand Tracker</span>
-
-                <span class="survey-country grid-only">US</span>
-
-                <div class="pull-right">
-                  <span class="survey-end-date">2014 - Oct 1</span>
-                  <span class="survey-stage">
-                    <span class="stage draft">Draft</span>
-                    <span class="stage awarded active">Awarded</span>
-                    <span class="stage live">Live</span>
-                    <span class="stage ended">Ended</span>
-                  </span>
-                </div>
-              </li>
-              <li class="survey-item">
-
-                <span class="survey-country list-only">UK</span>
-
-                <span class="survey-name">UK Beer May 2014</span>
-
-                <span class="survey-country grid-only">UK</span>
-
-                <div class="pull-right">
-
-                  <span class="survey-progress">
-                    <span class="survey-progress-bg">
-                      <span class="survey-progress-fg" style="width: 88%;"></span>
-                    </span>
-
-                    <span class="survey-progress-labels">
-                      <span class="survey-progress-label">88%</span>
-
-                      <span class="survey-completes">490 / 500</span>
-                    </span>
-                  </span>
-
-                  <span class="survey-end-date ended">2014 - May 10</span>
-                  <span class="survey-stage">
-                    <span class="stage draft">Draft</span>
-                    <span class="stage awarded">Awarded</span>
-                    <span class="stage live">Live</span>
-                    <span class="stage ended active">Ended</span>
-                  </span>
-                </div>
-              </li>
-              <li class="survey-item">
-                <span class="survey-country list-only">US</span>
-
-                <span class="survey-name">Pepsi Tracker New Orleans</span>
-
-                <span class="survey-country grid-only">US</span>
-
-                <div class="pull-right">
-
-                  <span class="survey-progress">
-                    <span class="survey-progress-bg">
-                      <span class="survey-progress-fg" style="width: 25%;"></span>
-                    </span>
-
-                    <span class="survey-progress-labels">
-                      <span class="survey-progress-label">25%</span>
-
-                      <span class="survey-completes">150 / 500</span>
-                    </span>
-                  </span>
-
-                  <span class="survey-end-date">2014 - July 12</span>
-                  <span class="survey-stage">
-                    <span class="stage draft">Draft</span>
-                    <span class="stage awarded">Awarded</span>
-                    <span class="stage live active">Live</span>
-                    <span class="stage ended">Ended</span>
-                  </span>
-                </div>
-              </li>
-              <li class="survey-item">
-                <span class="survey-country list-only">US</span>
-
-                <span class="survey-name">Global Music Brand Tracker</span>
-
-                <span class="survey-country grid-only">US</span>
-
-                <div class="pull-right">
-                  <span class="survey-end-date">2014 - Oct 1</span>
-                  <span class="survey-stage">
-                    <span class="stage draft">Draft</span>
-                    <span class="stage awarded active">Awarded</span>
-                    <span class="stage live">Live</span>
-                    <span class="stage ended">Ended</span>
-                  </span>
-                </div>
-              </li>
+        thisisa</b>
+        <i class="fa fa-angle-double-right father"></i>
+        <b class="father">file:///D:/BaiduYunDownload/startbootstrap-sb-admin-2-1.0.8/pages/try.html</b>
+        <i class="fa fa-angle-double-right father"></i>
+        <b class="children">TAB1</b>
+        </span>
+        <div class="tabcontainer">
+            <ul class="tabs">
+                <li>
+                    <a href="#" name=".tab1_1">TAB1</a>
+                </li>
+                <li>
+                    <a href="#" name=".tab1_2">TAB2</a>
+                </li>
+                <li>
+                    <a href="#" name=".tab1_3">TAB3</a>
+                </li>
+                <li>
+                    <a href="#" name=".tab1_4">TAB4</a>
+                </li>
             </ul>
-
-          </ul>
-
+            <div class="content">
+                <div class="tab1_1 tab-list">
+                    <ul class="list">
+                        <span class="toggler active" data-toggle="list">
+              <span class="fa fa-list"></span>
+                        </span>
+                        <span class="toggler" data-toggle="grid">
+              <span class="fa fa-th"></span>
+                        </span>
+                        <ul class="surveys list">
+                            <li class="survey-item">
+                                <span class="survey-country list-only">UK</span>
+                                <span class="survey-name">UK Beer May 2014</span>
+                                <span class="survey-country grid-only">UK</span>
+                                <div class="pull-right">
+                                    <span class="survey-progress">
+                    <span class="survey-progress-bg">
+                      <span class="survey-progress-fg" style="width: 88%;"></span>
+                                    </span>
+                                    <span class="survey-progress-labels">
+                      <span class="survey-progress-label">88%</span>
+                                    <span class="survey-completes">490 / 500</span>
+                                    </span>
+                                    </span>
+                                    <span class="survey-end-date ended">2014 - May 10</span>
+                                    <span class="survey-stage">
+                    <span class="stage draft">Draft</span>
+                                    <span class="stage awarded">Awarded</span>
+                                    <span class="stage live">Live</span>
+                                    <span class="stage ended active">Ended</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="survey-item">
+                                <span class="survey-country list-only">US</span>
+                                <span class="survey-name">Pepsi Tracker New Orleans</span>
+                                <span class="survey-country grid-only">US</span>
+                                <div class="pull-right">
+                                    <span class="survey-progress">
+                    <span class="survey-progress-bg">
+                      <span class="survey-progress-fg" style="width: 25%;"></span>
+                                    </span>
+                                    <span class="survey-progress-labels">
+                      <span class="survey-progress-label">25%</span>
+                                    <span class="survey-completes">150 / 500</span>
+                                    </span>
+                                    </span>
+                                    <span class="survey-end-date">2014 - July 12</span>
+                                    <span class="survey-stage">
+                    <span class="stage draft">Draft</span>
+                                    <span class="stage awarded">Awarded</span>
+                                    <span class="stage live active">Live</span>
+                                    <span class="stage ended">Ended</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="survey-item">
+                                <span class="survey-country list-only">US</span>
+                                <span class="survey-name">Global Music Brand Tracker</span>
+                                <span class="survey-country grid-only">US</span>
+                                <div class="pull-right">
+                                    <span class="survey-end-date">2014 - Oct 1</span>
+                                    <span class="survey-stage">
+                    <span class="stage draft">Draft</span>
+                                    <span class="stage awarded active">Awarded</span>
+                                    <span class="stage live">Live</span>
+                                    <span class="stage ended">Ended</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="survey-item">
+                                <span class="survey-country list-only">UK</span>
+                                <span class="survey-name">UK Beer May 2014</span>
+                                <span class="survey-country grid-only">UK</span>
+                                <div class="pull-right">
+                                    <span class="survey-progress">
+                    <span class="survey-progress-bg">
+                      <span class="survey-progress-fg" style="width: 88%;"></span>
+                                    </span>
+                                    <span class="survey-progress-labels">
+                      <span class="survey-progress-label">88%</span>
+                                    <span class="survey-completes">490 / 500</span>
+                                    </span>
+                                    </span>
+                                    <span class="survey-end-date ended">2014 - May 10</span>
+                                    <span class="survey-stage">
+                    <span class="stage draft">Draft</span>
+                                    <span class="stage awarded">Awarded</span>
+                                    <span class="stage live">Live</span>
+                                    <span class="stage ended active">Ended</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="survey-item">
+                                <span class="survey-country list-only">US</span>
+                                <span class="survey-name">Pepsi Tracker New Orleans</span>
+                                <span class="survey-country grid-only">US</span>
+                                <div class="pull-right">
+                                    <span class="survey-progress">
+                    <span class="survey-progress-bg">
+                      <span class="survey-progress-fg" style="width: 25%;"></span>
+                                    </span>
+                                    <span class="survey-progress-labels">
+                      <span class="survey-progress-label">25%</span>
+                                    <span class="survey-completes">150 / 500</span>
+                                    </span>
+                                    </span>
+                                    <span class="survey-end-date">2014 - July 12</span>
+                                    <span class="survey-stage">
+                    <span class="stage draft">Draft</span>
+                                    <span class="stage awarded">Awarded</span>
+                                    <span class="stage live active">Live</span>
+                                    <span class="stage ended">Ended</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="survey-item">
+                                <span class="survey-country list-only">US</span>
+                                <span class="survey-name">Global Music Brand Tracker</span>
+                                <span class="survey-country grid-only">US</span>
+                                <div class="pull-right">
+                                    <span class="survey-end-date">2014 - Oct 1</span>
+                                    <span class="survey-stage">
+                    <span class="stage draft">Draft</span>
+                                    <span class="stage awarded active">Awarded</span>
+                                    <span class="stage live">Live</span>
+                                    <span class="stage ended">Ended</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="survey-item">
+                                <span class="survey-country list-only">UK</span>
+                                <span class="survey-name">UK Beer May 2014</span>
+                                <span class="survey-country grid-only">UK</span>
+                                <div class="pull-right">
+                                    <span class="survey-progress">
+                    <span class="survey-progress-bg">
+                      <span class="survey-progress-fg" style="width: 88%;"></span>
+                                    </span>
+                                    <span class="survey-progress-labels">
+                      <span class="survey-progress-label">88%</span>
+                                    <span class="survey-completes">490 / 500</span>
+                                    </span>
+                                    </span>
+                                    <span class="survey-end-date ended">2014 - May 10</span>
+                                    <span class="survey-stage">
+                    <span class="stage draft">Draft</span>
+                                    <span class="stage awarded">Awarded</span>
+                                    <span class="stage live">Live</span>
+                                    <span class="stage ended active">Ended</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="survey-item">
+                                <span class="survey-country list-only">US</span>
+                                <span class="survey-name">Pepsi Tracker New Orleans</span>
+                                <span class="survey-country grid-only">US</span>
+                                <div class="pull-right">
+                                    <span class="survey-progress">
+                    <span class="survey-progress-bg">
+                      <span class="survey-progress-fg" style="width: 25%;"></span>
+                                    </span>
+                                    <span class="survey-progress-labels">
+                      <span class="survey-progress-label">25%</span>
+                                    <span class="survey-completes">150 / 500</span>
+                                    </span>
+                                    </span>
+                                    <span class="survey-end-date">2014 - July 12</span>
+                                    <span class="survey-stage">
+                    <span class="stage draft">Draft</span>
+                                    <span class="stage awarded">Awarded</span>
+                                    <span class="stage live active">Live</span>
+                                    <span class="stage ended">Ended</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="survey-item">
+                                <span class="survey-country list-only">US</span>
+                                <span class="survey-name">Global Music Brand Tracker</span>
+                                <span class="survey-country grid-only">US</span>
+                                <div class="pull-right">
+                                    <span class="survey-end-date">2014 - Oct 1</span>
+                                    <span class="survey-stage">
+                    <span class="stage draft">Draft</span>
+                                    <span class="stage awarded active">Awarded</span>
+                                    <span class="stage live">Live</span>
+                                    <span class="stage ended">Ended</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="survey-item">
+                                <span class="survey-country list-only">UK</span>
+                                <span class="survey-name">UK Beer May 2014</span>
+                                <span class="survey-country grid-only">UK</span>
+                                <div class="pull-right">
+                                    <span class="survey-progress">
+                    <span class="survey-progress-bg">
+                      <span class="survey-progress-fg" style="width: 88%;"></span>
+                                    </span>
+                                    <span class="survey-progress-labels">
+                      <span class="survey-progress-label">88%</span>
+                                    <span class="survey-completes">490 / 500</span>
+                                    </span>
+                                    </span>
+                                    <span class="survey-end-date ended">2014 - May 10</span>
+                                    <span class="survey-stage">
+                    <span class="stage draft">Draft</span>
+                                    <span class="stage awarded">Awarded</span>
+                                    <span class="stage live">Live</span>
+                                    <span class="stage ended active">Ended</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="survey-item">
+                                <span class="survey-country list-only">US</span>
+                                <span class="survey-name">Pepsi Tracker New Orleans</span>
+                                <span class="survey-country grid-only">US</span>
+                                <div class="pull-right">
+                                    <span class="survey-progress">
+                    <span class="survey-progress-bg">
+                      <span class="survey-progress-fg" style="width: 25%;"></span>
+                                    </span>
+                                    <span class="survey-progress-labels">
+                      <span class="survey-progress-label">25%</span>
+                                    <span class="survey-completes">150 / 500</span>
+                                    </span>
+                                    </span>
+                                    <span class="survey-end-date">2014 - July 12</span>
+                                    <span class="survey-stage">
+                    <span class="stage draft">Draft</span>
+                                    <span class="stage awarded">Awarded</span>
+                                    <span class="stage live active">Live</span>
+                                    <span class="stage ended">Ended</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="survey-item">
+                                <span class="survey-country list-only">US</span>
+                                <span class="survey-name">Global Music Brand Tracker</span>
+                                <span class="survey-country grid-only">US</span>
+                                <div class="pull-right">
+                                    <span class="survey-end-date">2014 - Oct 1</span>
+                                    <span class="survey-stage">
+                    <span class="stage draft">Draft</span>
+                                    <span class="stage awarded active">Awarded</span>
+                                    <span class="stage live">Live</span>
+                                    <span class="stage ended">Ended</span>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="tab1_2 tab-list">TAB_2</div>
+                <div class="tab1_3 tab-list">TAB1_3</div>
+                <div class="tab1_4 tab-list">TAB1_4</div>
+            </div>
         </div>
-        <div class="tab1_2 tab-list">TAB_2</div>
-        <div class="tab1_3 tab-list">TAB1_3</div>
-        <div class="tab1_4 tab-list">TAB1_4</div>
-      </div>
     </div>
-  </div>
 </body>
-  <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
-  <script type="text/javascript" src="js/load.js"></script>
-  <script type="text/javascript" src="js/mydemo.js"></script>
+<script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src="js/logic.js"></script>
+<script type="text/javascript" src="js/mydemo.js"></script>

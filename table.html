@@ -2,17 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv=Content-Type content=“text/html;
-charset=utf-8″>
+     <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
     <meta http-equiv=X-UA-Compatible content=IE=EmulateIE7>
     <title>CRICKET</title>
     <link href="img/icon.ico"rel="shortcut icon"></head>
-    <link rel="stylesheet"type="text/css"href="css/style.css">
+    <link rel="stylesheet"type="text/css"href="css/cricket.css">
     <link rel="stylesheet"type="text/css"href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/alert.css">
+<!--- <link rel="stylesheet/less" type="text/css" href="less/alert.less">
+    <script type="text/javascript" src="js/less.min.js"></script>-->
 <body>
     <div class="nav_top">
-        <div class="logo"> <i></i>
+        <div class="logo"> <i><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="60px" height="56px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#474F79" d="M181.5,151.464c0,34.126-56.102,46.536-78.336,46.536  C80.929,198,22.5,183.522,22.5,151.464c0-53.876,14.521-86.512,52.287-96.204L47.511,7.837c-0.967-1.682-0.393-3.832,1.282-4.803  l0.506-0.293c1.675-0.971,3.817-0.395,4.784,1.287L82.61,53.627c5.844-0.948,12.158-1.441,19.002-1.441  c7.639,0,14.634,0.611,21.056,1.791l28.756-49.85c0.973-1.687,3.128-2.264,4.813-1.291l0.509,0.294  c1.685,0.974,2.262,3.13,1.29,4.816l-27.58,47.809C166.983,66.054,181.5,98.512,181.5,151.464z M69.896,80.107  c-10.327,0-18.698,8.334-18.698,18.614c0,10.281,8.371,18.615,18.698,18.615c10.326,0,18.698-8.334,18.698-18.615  C88.594,88.441,80.222,80.107,69.896,80.107z M134.104,80.107c-10.327,0-18.698,8.334-18.698,18.614  c0,10.281,8.371,18.615,18.698,18.615c10.326,0,18.698-8.334,18.698-18.615C152.803,88.441,144.431,80.107,134.104,80.107z"/>
+
+                    <path class="cricket_mouse_left" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M82.631,137.522c-2.14-1.679-9.579-1.348-16.052-3.662    c-6.385-2.284-13.759-6.293-13.759-6.293s-6.643-6.749-4.574,19.577c2.125,27.019,18.19,33.3,20.483,32.461    c2.294-0.838,14.666-38.754,14.666-38.754S84.771,139.2,82.631,137.522z"/>
+                    <path class="cricket_mouse_right" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M150.07,127.345c0,0-7.304,4.137-13.648,6.531    c-6.43,2.428-13.874,2.227-15.984,3.942c-2.11,1.715-0.705,3.342-0.705,3.342s13.031,37.694,15.34,38.492    c2.307,0.8,18.261-5.762,19.913-32.813C156.594,120.481,150.07,127.345,150.07,127.345z"/>
+
+                    <g class="cricket_eye">
+                        <circle fill-rule="evenodd" clip-rule="evenodd" fill="#474F79" cx="90" cy="96" r="9.125"/>
+                        <circle fill-rule="evenodd" clip-rule="evenodd" fill="#474F79" cx="134" cy="96" r="9.125"/>
+                    </g>
+                </svg></i>
             <span>CRICKET</span>
         </div>
         <div id="search">
@@ -23,9 +37,34 @@ charset=utf-8″>
                 <i class="fa fa-refresh"></i>
             </div>
         </div>
+        <div class="set">
+            <span class="fa fa-ellipsis-h"></span>
+        </div>
 
         <div class="close">
-            <i class="fa fa-times"></i>
+            <a href="#menu" id="toggle" class="toggle">
+                <span></span>
+            </a>
+
+            <div id="menu" class="menu">
+                <ul>
+                    <li>
+                        <a  id="list">list</a>
+                    </li>
+                    <li>
+                        <a  id="table" class=" active">table</a>
+                    </li>
+                    <li>
+                        <a  id="button" >button&icon</a>
+                    </li>
+                    <li>
+                        <a  id="chart">chart</a>
+                    </li>
+                     <li>
+                        <a  id="login">login</a>
+                    </li>
+                </ul>
+            </div>
 
         </div>
 
@@ -117,7 +156,255 @@ charset=utf-8″>
         </div>
     </div>
 
-    <div id="main_container"></div>
+    <div id="main_container">
+        <div class="panelcontainer">
+            <div class="row">
+                <div class="colume-6">
+                    <div class="panel " >
+                        <div class="panel-title">
+                            <span class="title-word">Table1</span>
+                            <i class="fa fa-table"></i>
+
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Page</th>
+                                            <th>Visits</th>
+                                            <th>% New Visits</th>
+                                            <th>Revenue</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>/index.html</td>
+                                            <td>1265</td>
+                                            <td>32.3%</td>
+                                            <td>$321.33</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/about.html</td>
+                                            <td>261</td>
+                                            <td>33.3%</td>
+                                            <td>$234.12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/sales.html</td>
+                                            <td>665</td>
+                                            <td>21.3%</td>
+                                            <td>$16.34</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/blog.html</td>
+                                            <td>9516</td>
+                                            <td>89.3%</td>
+                                            <td>$1644.43</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/404.html</td>
+                                            <td>23</td>
+                                            <td>34.3%</td>
+                                            <td>$23.52</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/services.html</td>
+                                            <td>421</td>
+                                            <td>60.3%</td>
+                                            <td>$724.32</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/blog/post.html</td>
+                                            <td>1233</td>
+                                            <td>93.2%</td>
+                                            <td>$126.34</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="colume-6">
+                    <div class="panel ">
+                        <div class="panel-title">
+                            <span class="title-word">Table2</span>
+                            <i class="fa fa-table"></i>
+
+                        </div>
+
+                        <div class="panel-body">
+
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Page</th>
+                                            <th>Visits</th>
+                                            <th>% New Visits</th>
+                                            <th>Revenue</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>/index.html</td>
+                                            <td>1265</td>
+                                            <td>32.3%</td>
+                                            <td>$321.33</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/about.html</td>
+                                            <td>261</td>
+                                            <td>33.3%</td>
+                                            <td>$234.12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/sales.html</td>
+                                            <td>665</td>
+                                            <td>21.3%</td>
+                                            <td>$16.34</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/blog.html</td>
+                                            <td>9516</td>
+                                            <td>89.3%</td>
+                                            <td>$1644.43</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/404.html</td>
+                                            <td>23</td>
+                                            <td>34.3%</td>
+                                            <td>$23.52</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/services.html</td>
+                                            <td>421</td>
+                                            <td>60.3%</td>
+                                            <td>$724.32</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/blog/post.html</td>
+                                            <td>1233</td>
+                                            <td>93.2%</td>
+                                            <td>$126.34</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="colume-12">
+
+                    <div class="panel">
+                        <div class="panel-title">
+                            <span class="title-word">Table3</span>
+                            <i class="fa fa-table"></i>
+
+                        </div>
+                        <div class="panel-body">
+
+                            <table class="table table-striped table-bordered table-hover dataTable no-footer" id="dataTables-example" role="grid" aria-describedby="dataTables-example_info">
+                                <thead>
+                                    <tr role="row">
+                                        <th class="sorting_asc" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 287px;">Rendering engine</th>
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 337px;">Browser</th>
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 308px;">Platform(s)</th>
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 252px;">Engine version</th>
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 190px;">CSS grade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr class="gradeA odd" role="row">
+                                        <td class="sorting_1">Gecko</td>
+                                        <td>Firefox 1.0</td>
+                                        <td>Win 98+ / OSX.2+</td>
+                                        <td class="center">1.7</td>
+                                        <td class="center">A</td>
+                                    </tr>
+                                    <tr class="gradeA even" role="row">
+                                        <td class="sorting_1">Gecko</td>
+                                        <td>Firefox 1.5</td>
+                                        <td>Win 98+ / OSX.2+</td>
+                                        <td class="center">1.8</td>
+                                        <td class="center">A</td>
+                                    </tr>
+                                    <tr class="gradeA odd" role="row">
+                                        <td class="sorting_1">Gecko</td>
+                                        <td>Firefox 2.0</td>
+                                        <td>Win 98+ / OSX.2+</td>
+                                        <td class="center">1.8</td>
+                                        <td class="center">A</td>
+                                    </tr>
+                                    <tr class="gradeA even" role="row">
+                                        <td class="sorting_1">Gecko</td>
+                                        <td>Firefox 3.0</td>
+                                        <td>Win 2k+ / OSX.3+</td>
+                                        <td class="center">1.9</td>
+                                        <td class="center">A</td>
+                                    </tr>
+                                    <tr class="gradeA odd" role="row">
+                                        <td class="sorting_1">Gecko</td>
+                                        <td>Camino 1.0</td>
+                                        <td>OSX.2+</td>
+                                        <td class="center">1.8</td>
+                                        <td class="center">A</td>
+                                    </tr>
+                                    <tr class="gradeA even" role="row">
+                                        <td class="sorting_1">Gecko</td>
+                                        <td>Camino 1.5</td>
+                                        <td>OSX.3+</td>
+                                        <td class="center">1.8</td>
+                                        <td class="center">A</td>
+                                    </tr>
+                                    <tr class="gradeA odd" role="row">
+                                        <td class="sorting_1">Gecko</td>
+                                        <td>Netscape 7.2</td>
+                                        <td>Win 95+ / Mac OS 8.6-9.2</td>
+                                        <td class="center">1.7</td>
+                                        <td class="center">A</td>
+                                    </tr>
+                                    <tr class="gradeA even" role="row">
+                                        <td class="sorting_1">Gecko</td>
+                                        <td>Netscape Browser 8</td>
+                                        <td>Win 98SE+</td>
+                                        <td class="center">1.7</td>
+                                        <td class="center">A</td>
+                                    </tr>
+                                    <tr class="gradeA odd" role="row">
+                                        <td class="sorting_1">Gecko</td>
+                                        <td>Netscape Navigator 9</td>
+                                        <td>Win 98+ / OSX.2+</td>
+                                        <td class="center">1.8</td>
+                                        <td class="center">A</td>
+                                    </tr>
+                                    <tr class="gradeA even" role="row">
+                                        <td class="sorting_1">Gecko</td>
+                                        <td>Mozilla 1.0</td>
+                                        <td>Win 95+ / OSX.1+</td>
+                                        <td class="center">1</td>
+                                        <td class="center">A</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
     <script type="text/javascript"src="js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript" src="js/sweetalert.min.js"></script>
+ <!--   <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>-->
     <script type="text/javascript"src="js/mydemo.js"></script>
+    <script type="text/javascript" src="js/logic.js"></script>
