@@ -63,7 +63,6 @@ if (e.pageX - posix.x + posix.w <500) {   $box.css({
 
 
 //close
-var theToggle = document.getElementById('toggle');
 
 // based on Todd Motto functions
 // http://toddmotto.com/labs/reusable-js/
@@ -101,11 +100,16 @@ function toggleClass(elem, className) {
     }
 }
 
-theToggle.onclick = function() {
-   toggleClass(this, 'on');
+$("#toggle").click(function() {
+ toggleClass(this, 'on');
    return false;
-};
+});
+$("#toggle").blur(function() {
 
+	if ($("#toggle").hasClass('on')) { $("#toggle").removeClass('on');
+   return false;};
+
+});
 
 
 
@@ -172,6 +176,113 @@ $("#input").on('keydown', function() {
   });
 
 }).call(this);
+
+
+
+
+
+
+	$("button#alert ").click(function(){
+		swal("This is a dialog!");
+	});
+	$("button#alert_sucess ").click(function(){
+		swal("Good!", "Popup a dialog", "success");
+	});
+	$("button#alert_error ").click(function(){
+		swal("OMG!", "Popup an error dialog", "error");
+	});
+	$("button#alert_delete ").click(function(){
+		 swal({
+			title: "Are you sure to delete?", 
+			text: "Are you sure to delete?", 
+			type: "warning",
+			showCancelButton: true,
+			closeOnConfirm: false,
+			confirmButtonText: "Yes,delete",
+			confirmButtonColor: "#ec6c62"
+			}, function() {
+				$.ajax({
+					url: "do.php",
+					type: "DELETE"
+				}).done(function(data) {
+					swal("SUCESS!", "The data has been deleted!", "success");
+				}).error(function(data) {
+					swal("OMG", " failed", "error");
+				});
+			});
+	});
+	
+/*	$("#alert_good button").click(function(){
+		swal({   
+			title: "Good!",   
+			text: '自定义<span style="color:red">图片</span>、<a href="#">HTML内容</a>。<br/>5秒后自动关闭。',   
+			imageUrl: "images/thumbs-up.jpg",
+			html: true,
+			timer: 5000,   
+			showConfirmButton: false
+		});
+	});
+	*/
+	$("button#alert_input ").click(function(){
+		swal({   
+			title: "input",   
+			text: "input here and confirm:",   
+			type: "input",   
+			showCancelButton: true,   
+			closeOnConfirm: false,   
+			animation: "slide-from-top",   
+			inputPlaceholder: "Write something" 
+		}, function(inputValue){   
+			if (inputValue === false) return false;      
+			if (inputValue === "") {     
+				swal.showInputError("Please input somethng!");     
+				return false   
+			}      
+			swal("Awesome", "Your word: " + inputValue, "success"); 
+		});
+	});
+
+//cricket svg animation
+
+$(window).mousemove(function(event) {
+	var winwidth = $(window).width();
+	var winheight = $(window).height();
+var cxx1 = 50+event.clientX / winwidth*36;
+var cxx2 = 120+event.clientX / winwidth*36;
+var cyy = 96+event.clientY / winwidth*40;
+$(".cricket_eye").children("circle").eq(0).attr({
+	'cx': cxx1,
+	'cy':cyy
+
+});
+$(".cricket_eye").children("circle").eq(1).attr({
+	'cx': cxx2,
+'cy':cyy
+});
+
+});
+
+
+$(window).mousedown(function(event) {
+	/* Act on the event */
+	$(".cricket_mouse_left").css({
+
+		'transform':'rotate(20deg)'});
+	$(".cricket_mouse_right").css({
+
+		'transform':'rotate(-20deg)'});
+
+	$(this).mouseup(function(event) {
+		$(".cricket_mouse_left").css({
+
+		'transform':'rotate(0deg)'});
+	$(".cricket_mouse_right").css({
+
+		'transform':'rotate(0deg)'});
+	});
+});
+
+
 /*
 function makeheight(){
 	var aheigth = $(".side_contain").innerHeight;
